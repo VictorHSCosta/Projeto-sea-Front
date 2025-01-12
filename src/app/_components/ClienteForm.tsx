@@ -55,7 +55,7 @@ export default function ClienteForm({
           name="nome"
           required
           placeholder="Digite o nome do cliente"
-          defaultValue={initialData.nome || ""}
+          defaultValue={initialData.nome ?? ""}
           className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
         />
       </div>
@@ -70,7 +70,7 @@ export default function ClienteForm({
           name="cpf"
           required
           placeholder="Digite o CPF (apenas números)"
-          defaultValue={initialData.cpf || ""}
+          defaultValue={initialData.cpf ?? ""}
           className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
         />
       </div>
@@ -85,7 +85,7 @@ export default function ClienteForm({
           name="cep"
           required
           placeholder="Digite o CEP"
-          defaultValue={initialData.cep || ""}
+          defaultValue={initialData.cep ?? ""}
           className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
         />
       </div>
@@ -103,7 +103,7 @@ export default function ClienteForm({
           name="logradouro"
           required
           placeholder="Digite o endereço"
-          defaultValue={initialData.logradouro || ""}
+          defaultValue={initialData.logradouro ?? ""}
           className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
         />
       </div>
@@ -122,7 +122,7 @@ export default function ClienteForm({
             name="numero"
             required
             placeholder="Número do imóvel"
-            defaultValue={initialData.numero || ""}
+            defaultValue={initialData.numero ?? ""}
             className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
         </div>
@@ -138,7 +138,7 @@ export default function ClienteForm({
             id="complemento"
             name="complemento"
             placeholder="Opcional"
-            defaultValue={initialData.complemento || ""}
+            defaultValue={initialData.complemento ?? ""}
             className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
         </div>
@@ -155,7 +155,7 @@ export default function ClienteForm({
             name="bairro"
             required
             placeholder="Digite o bairro"
-            defaultValue={initialData.bairro || ""}
+            defaultValue={initialData.bairro ?? ""}
             className="w-full rounded-lg border border-gray-300 px-4 py-2 focus:outline-none focus:ring focus:ring-blue-300"
           />
         </div>
@@ -164,7 +164,7 @@ export default function ClienteForm({
       <div className="mb-4">
         <label className="mb-2 block font-bold text-gray-700">Telefones</label>
         <div id="telefonesContainer">
-          {(initialData.telefones || [""]).map((telefone, index) => (
+          {(initialData.telefones ?? [""]).map((telefone, index) => (
             <input
               key={index}
               type="text"
@@ -189,7 +189,7 @@ export default function ClienteForm({
       <div className="mb-4">
         <label className="mb-2 block font-bold text-gray-700">Emails</label>
         <div id="emailsContainer">
-          {(initialData.emails || [""]).map((email, index) => (
+          {(initialData.emails ?? [""]).map((email, index) => (
             <input
               key={index}
               type="email"
