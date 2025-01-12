@@ -9,9 +9,9 @@ export default function NavBar() {
   const [menu, setMenu] = useState(false);
   return (
     <header className="bg-primary flex items-center justify-between px-2 align-middle">
-      <a href="/">
+      <Link href="/">
         <Image src="/logo.png" alt="Logo" width={70} height={60}></Image>
-      </a>
+      </Link>
       <nav>
         <ul className="hidden flex-row space-x-3 md:flex">
           <li className="bg-secondary hover:bg-hover rounded-3xl p-2 text-white">
