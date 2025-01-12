@@ -1,37 +1,69 @@
-import Link from "next/link";
-
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-      <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-        <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-          Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-        </h1>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/usage/first-steps"
-            target="_blank"
+    <main>
+      <section className="bg-secondary py-20 text-center text-white">
+        <div className="container mx-auto">
+          <h2 className="mb-4 text-4xl font-bold">
+            Bem-vindo ao Sistema de Gerenciamento
+          </h2>
+          <p className="mb-6 text-lg">
+            Simplifique a gestão de clientes com eficiência e segurança.
+          </p>
+          <a
+            href="/login"
+            className="text-secondary rounded-full bg-white px-6 py-3 shadow-md hover:bg-gray-100"
           >
-            <h3 className="text-2xl font-bold">First Steps →</h3>
-            <div className="text-lg">
-              Just the basics - Everything you need to know to set up your
-              database and authentication.
-            </div>
-          </Link>
-          <Link
-            className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="https://create.t3.gg/en/introduction"
-            target="_blank"
-          >
-            <h3 className="text-2xl font-bold">Documentation →</h3>
-            <div className="text-lg">
-              Learn more about Create T3 App, the libraries it uses, and how to
-              deploy it.
-            </div>
-          </Link>
+            Acessar o Sistema
+          </a>
         </div>
-      </div>
+      </section>
+      <section id="features" className="py-12">
+        <div className="container mx-auto px-4">
+          <h3 className="mb-8 text-center text-3xl font-bold">
+            Funcionalidades
+          </h3>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            <div className="rounded-lg bg-white p-6 text-center shadow-md">
+              <h4 className="mb-2 text-xl font-bold">Autenticação Segura</h4>
+              <p className="text-gray-600">
+                Login rápido e seguro para administradores e usuários comuns.
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-white p-6 text-center shadow-md">
+              <h4 className="mb-2 text-xl font-bold">
+                Gerenciamento de Clientes
+              </h4>
+              <p className="text-gray-600">
+                Adicione, edite e visualize informações detalhadas de clientes.
+              </p>
+            </div>
+
+            <div className="rounded-lg bg-white p-6 text-center shadow-md">
+              <h4 className="mb-2 text-xl font-bold">
+                Consultas Automatizadas
+              </h4>
+              <p className="text-gray-600">
+                Integração com serviços de consulta de CEP e CPF.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gray-100 py-12">
+        <div className="container mx-auto px-4">
+          <h3 className="mb-8 text-center text-3xl font-bold">
+            Sobre o Sistema
+          </h3>
+          <p className="mx-auto max-w-3xl text-center text-gray-600">
+            Este sistema foi projetado para empresas que buscam uma solução
+            eficiente para gerenciar seus clientes, mantendo os dados seguros e
+            acessíveis. Com funcionalidades modernas e integração com serviços
+            externos, você pode simplificar sua gestão.
+          </p>
+        </div>
+      </section>
     </main>
   );
 }
