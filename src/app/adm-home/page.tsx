@@ -1,5 +1,7 @@
 import React from "react";
 import ClienteItem from "~/app/_components/ClienteItem";
+import Link from "next/link";
+import Botao from "../_components/Botao";
 
 const AdminDashboard = () => {
   const clientes = [
@@ -11,7 +13,11 @@ const AdminDashboard = () => {
   return (
     <div className="min-h-screen bg-gray-100 p-6">
       <div className="mx-auto max-w-4xl rounded-lg bg-white p-6 shadow-md">
-        <h2 className="mb-4 text-2xl font-bold text-blue-600">Clientes</h2>
+        <div className="mb-6 flex items-center justify-between align-middle">
+          <h2 className="text-2xl font-bold text-secondary">Clientes</h2>
+          <Botao href="/cadastro-cliente" title="Cadastrar " />
+        </div>
+
         <div>
           {clientes.map((cliente) => (
             <ClienteItem key={cliente.id} cliente={cliente} />
